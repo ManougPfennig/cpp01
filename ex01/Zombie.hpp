@@ -6,9 +6,11 @@
 class Zombie {
 
 private :
+
 	std::string	_name;
 
 public :
+
 		Zombie(); // DEFAULT CONSTRUCTOR
 		Zombie(std::string name); // CONSTRUCTOR WITH STRING
 		~Zombie( void ); // DESTRUCTOR
