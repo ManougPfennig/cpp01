@@ -1,5 +1,5 @@
 NAME = noSed
-SRCS = main.cpp
+SRCS = main.cpp fileStr.cpp
 FLAGS = -std=c++98 -Wall -Wextra -Werror
 
 OBJS = ${SRCS:.cpp=.o}
