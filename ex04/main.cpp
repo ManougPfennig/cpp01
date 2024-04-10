@@ -34,7 +34,7 @@ int	main(int ac, char **av)
 	if (parsing(ac, av))
 	{
 		std::cout << "./noSed <filename> <toReplace> <replaceWith>" << std::endl;
-		return (1);
+		return (0);
 	}
 
 	//Convert elements to std::strings
