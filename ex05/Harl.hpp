@@ -2,6 +2,7 @@
 # define HARL_H
 
 #include <iostream>
+#include <string>
 
 class Harl{
 
@@ -11,7 +12,8 @@ private:
 		void	info( void );
 		void	warning( void );
 		void	error( void );
-
+		void (Harl::*funcPtrArray[4])();
+		
 public:
 
 		Harl( void );
@@ -19,6 +21,7 @@ public:
 
 		void	complain( std::string level );
 
-};
+		const std::string	msgList[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+};	
 
-#define HARL_H
+#endif

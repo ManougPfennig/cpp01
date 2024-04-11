@@ -18,19 +18,19 @@ void	Harl::debug( void ){
 	return ;
 }
 
-void	Harl::info(std::string level){
+void	Harl::info( void ){
 
 	std::cout << "I cannot believe adding extra bacon costs more money!" << std::endl;
 	return ;
 }
 
-void	Harl::warning(std::string level){
+void	Harl::warning( void ){
 
 	std::cout << "I've been coming for years! I should deserve it for free!" << std::endl;
 	return ;
 }
 
-void	Harl::error(std::string level){
+void	Harl::error( void ){
 
 	std::cout <<  "This is unacceptable! I want to speak to the manager now." << std::endl;
 	return ;
@@ -38,5 +38,12 @@ void	Harl::error(std::string level){
 
 void	Harl::complain(std::string level){
 
+	int		i = 0;
+	void	(Harl::*funcPtrArray[4])(){&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};	
+	
+	while (level != msgList[i] && i < 4)
+		i++;
+	if (i < 4)
+		(this->*funcPtrArray[i])();
 	return ;
 }
